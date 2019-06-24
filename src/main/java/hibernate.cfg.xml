@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/academy</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1111</property>
+
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!--DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Person"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Student"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Teacher"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Group"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Contract"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Form"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Specialization"/>
+        <mapping class="com.java1910.academyWithInterface.model.db.entities.Subject"/>
+
+    </session-factory>
+</hibernate-configuration>
